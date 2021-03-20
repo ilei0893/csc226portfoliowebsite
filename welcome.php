@@ -1,7 +1,3 @@
-<?php 
-  require 'handle_form.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +15,6 @@
 </head>
 
 <body style="background-color:#39bfa7;">
-
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -40,28 +35,31 @@
     </div>
   </nav>
 
+  <div class="card-rows mx-auto d-flex justify-content-center col-3">
+    <div class="Assignments">
+      <div class="card text-center" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Assignment 2</h5>
+          <p class="card-text">
+            PHP Basics
+          </p>
+          <a href="assignment2.php" class="btn btn-primary">Go!</a>
+        </div>
+      </div>
 
-  <div class="form">
-    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
-      <p>
-        <label>username:
-          <input type="text" name="username" value="<?php echo $_POST['username'] ?? ''; ?>">
-          <small>
-            <?php echo (isset($errors['username'])) ? $errors['username'] : ''; ?>
-          </small>
-        </label>
-      </p>
-      <p>
-        <label>password:
-          <input type="text" name="password">
-          <small>
-            <?php echo (isset($errors['password'])) ? $errors['password'] : ''; ?>
-          </small>
-        </label>
-      </p>
-      <input type="submit" value="submit" name="submit">
-    </form>
+      <div class="card text-center" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Assignment 3</h5>
+          <p class="card-text">
+            Form Handling
+          </p>
+          <a href="assignment3.php" class="btn btn-primary">Go!</a>
+        </div>
+      </div>
+
+    </div>
   </div>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
