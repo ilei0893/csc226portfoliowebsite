@@ -19,7 +19,15 @@
 </head>
 
 <body style="background-color:#39bfa7;">
-
+  <?php if(count($errors) > 0): ?>
+  <ul>
+    <?php
+      foreach($errors as $key=>$error){
+        echo "<li>".$error."</li>";
+      }
+    ?>
+  </ul>
+  <?php endif; ?>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,6 +47,28 @@
     </div>
   </nav>
 
+  <div class="form">
+
+    <form action="assignment3.php" method="POST">
+      <p>
+        <label>username:
+          <input type="text" name="username" value="<?php echo $_POST['username'] ?? ''; ?>">
+          <small>
+            <?php echo (isset($errors['username'])) ? $errors['username'] : ''; ?>
+          </small>
+        </label>
+      </p>
+      <p>
+        <label>password:
+          <input type="text" name="password">
+          <small>
+            <?php echo (isset($errors['password'])) ? $errors['password'] : ''; ?>
+          </small>
+        </label>
+      </p>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
