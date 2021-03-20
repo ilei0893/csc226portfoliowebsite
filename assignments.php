@@ -39,14 +39,23 @@
     <div class="Assignments">
       <div class="card text-center" style="width: 18rem">
         <div class="card-body">
-          <h5 class="card-title">Assignment 1</h5>
+          <h5 class="card-title">Assignment 2</h5>
           <p class="card-text">
             PHP Basics
           </p>
-          <a href="assignment1.php" class="btn btn-primary">Go!</a>
+          <a href="assignment2.php" class="btn btn-primary">Go!</a>
         </div>
       </div>
 
+      <div class="card text-center" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Assignment 3</h5>
+          <p class="card-text">
+            Form Handling
+          </p>
+          <a href="assignment2.php" class="btn btn-primary">Go!</a>
+        </div>
+      </div>
 
     </div>
   </div>
