@@ -40,7 +40,7 @@
       {
         //Validate username and use GET to retrieve the name
         $name = validateStr($_POST['username']);
-        header("Location: http://localhost/CSC226/assignments/assignment3/welcome.php?username=$name");
+        header("Location: http://163.238.35.165/~lei/portfolio/assignments/assignment3/welcome.php?username=$name");
       }
     }
   }

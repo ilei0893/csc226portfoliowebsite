@@ -32,7 +32,7 @@
       $decodedData = json_decode($data, true);
       array_push($decodedData, $newAcc);
       file_put_contents("accounts.JSON", json_encode($decodedData,true));
-      header("Location: http://localhost/CSC226/assignments/assignment3/assignment3.php?success=1");
+      header("Location: http://163.238.35.165/~lei/portfolio/assignments/assignment3/assignment3.php?success=1");
     }
 
 }
