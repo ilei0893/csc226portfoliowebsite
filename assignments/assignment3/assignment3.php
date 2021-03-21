@@ -43,6 +43,12 @@
 
   <div class="form">
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+      <!-- Sign up success message -->
+      <?php if(isset($_GET['success']) && $_GET['success'] == 1 )
+      {
+        echo "Account successfully created!";
+      } 
+      ?>
       <p>
         <label>username:
           <input type="text" name="username" value="<?php echo $_POST['username'] ?? ''; ?>">
@@ -58,6 +64,9 @@
             <?php echo (isset($errors['password'])) ? $errors['password'] : ''; ?>
           </small>
         </label>
+      </p>
+      <p>
+        <a href="signup.php">Sign up</a>
       </p>
       <input type="submit" value="submit" name="submit">
     </form>

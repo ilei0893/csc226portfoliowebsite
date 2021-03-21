@@ -11,12 +11,8 @@
   //get json data and decode it
   $data = file_get_contents("accounts.JSON"); 
   $decodedData = json_decode($data, true);
-  echo '<pre>';
-  var_dump($decodedData);
-  echo '</pre>';
-  
-  $keys = array_keys($decodedData);
 
+  
 	//$_GET and $_POST arrays are processed on the server
 	//The values in $_GET and $_POST will be deleted after the request&response
 	//How to display errors in the form with PHP
@@ -43,8 +39,8 @@
       if(count($errors) == 0)
       {
         //Validate username and use GET to retrieve the name
-        $name = $_GET(validateStr($_POST['username']));
-        header("Location: http://localhost/CSC226/welcome.php?username=$name");
+        $name = validateStr($_POST['username']);
+        header("Location: http://localhost/CSC226/assignments/assignment3/welcome.php?username=$name");
       }
     }
   }

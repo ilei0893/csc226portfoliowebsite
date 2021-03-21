@@ -1,5 +1,5 @@
-<?php
-  require 'handle_form.php';
+<?php 
+  require 'handle_signup_form.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +20,7 @@
 
 <body style="background-color:#39bfa7;">
 
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,13 +40,35 @@
     </div>
   </nav>
 
+  <!-- Allow letters, digits, period, and underscore -->
+  <?php 
+  $regex = "/^[a-zA-Z\d\.\_]+$/"; 
+  ?>
+  <div class="form">
+    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+      <p>
+        <label>Enter a username:
+          <input type="text" name="username" value="<?php echo $_POST['username'] ?? ''; ?>">
+          <small>
+            <?php echo (isset($errors['username'])) ? $errors['username'] : ''; ?>
+          </small>
+        </label>
+      </p>
+      <p>
+        <label>Enter a password:
+          <input type="text" name="password">
+          <small>
+            <?php echo (isset($errors['password'])) ? $errors['password'] : ''; ?>
+          </small>
+        </label>
+      </p>
+      <p>
+        <a href="assignment3.php">Go back</a>
+      </p>
 
-  <div>
-    <?php 
-     $user = (isset($_GET['username'])) ? $_GET['username'] : '';
-    echo "hello ".$user."!" ?>
+      <input type="submit" value="submit" name="submit">
+    </form>
   </div>
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
