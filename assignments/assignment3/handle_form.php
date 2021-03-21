@@ -42,8 +42,9 @@
      {
       if(count($errors) == 0)
       {
-        $name = validateStr($_POST['username']);
-        header('Location: welcome.php);
+        //Validate username and use GET to retrieve the name
+        $name = $_GET(validateStr($_POST['username']));
+        header("Location: http://localhost/CSC226/welcome.php?username=$name");
       }
     }
   }

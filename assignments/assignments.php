@@ -25,7 +25,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a id="home" class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+          <a id="home" class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
           <a id="Assignments" class="nav-link" href="assignments.php">Assignments <span
@@ -43,7 +43,7 @@
           <p class="card-text">
             PHP Basics
           </p>
-          <a href="assignment2.php" class="btn btn-primary">Go!</a>
+          <a href="assignment2/assignment2.php" class="btn btn-primary">Go!</a>
         </div>
       </div>
 
@@ -53,7 +53,7 @@
           <p class="card-text">
             Form Handling
           </p>
-          <a href="assignment3.php" class="btn btn-primary">Go!</a>
+          <a href="assignment3/assignment3.php" class="btn btn-primary">Go!</a>
         </div>
       </div>
 

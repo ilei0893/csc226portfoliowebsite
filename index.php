@@ -28,7 +28,7 @@
           <a id="home" class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a id="Assignments" class="nav-link" href="assignments.php">Assignments <span
+          <a id="Assignments" class="nav-link" href="assignments/assignments.php">Assignments <span
               class="sr-only">(current)</span></a>
         </li>
       </ul>
@@ -71,7 +71,7 @@
       <div class="works">
         <h2>Check out some of my works</h2>
         <div class="card text-center" style="width: 18rem">
-          <img class="card-img-top" src="covid.png" alt="covid19" />
+          <img class="card-img-top" src="images/covid.png" alt="covid19" />
           <div class="card-body">
             <h5 class="card-title">COVID-19 Tracker</h5>
             <p class="card-text">
