@@ -80,6 +80,37 @@
   </div>
   <hr>
 
+  <div class="part2">
+    <h1>Part 2: Prepare SQL queries</h1>
+    <h2>1. List the names of customers with credit limits of $7500 or less.</h2>
+    <p>Select * <br>
+      from customer <br>
+      where credit_limit < 7500; </p>
+
+        <h2>2. List all the orders placed by all customers. The output should have customer name, order number and order
+          date.</h2>
+        <p>select o.ORDER_NUM, o.ORDER_DATE, c.CUSTOMER_NAME <br>
+          from customer as c, orders as o <br>
+          where c.CUSTOMER_NUM = o.CUSTOMER_NUM;</p>
+
+        <h2>3. How many customers have balances which are less than their credit limits? Hint: Use Count() function</h2>
+        <p>select COUNT(CUSTOMER_NUM) <br>
+          from customer <br>
+          where BALANCE < CREDIT_LIMIT;</p>
+
+
+            <h2>4. Get representatives with their number of orders that they helped each customer. The output should
+              have rep_num, rep_name, customer_name and the count.</h2>
+            <p>select r.REP_NUM, CONCAT(r.FIRST_NAME, " ", r.LAST_NAME) as REP_NAME, c.CUSTOMER_NAME, COUNT(c.REP_NUM)
+              <br>
+              from rep as r <br>
+              inner join customer as c on r.REP_NUM = c.REP_NUM <br>
+              GROUP BY r.REP_NUM, c.CUSTOMER_NAME <br>
+              ORDER BY r.REP_NUM;
+            </p>
+
+  </div>
+  <hr>
 
 
   <!-- Optional JavaScript -->
